@@ -32,7 +32,6 @@ export function CreateRecordPage(props) {
       body: JSON.stringify({
         name,
         text,
-        registered: false,
       }),
     })
       .then(applyResult)
@@ -41,7 +40,7 @@ export function CreateRecordPage(props) {
 
   useEffect(() => {
     if (name === null) {
-      document.getElementById("name").style.background = "red";
+      document.getElementById("name").style.border = "red";
     } else {
       document.getElementById("name").style.border = "black";
     }
@@ -49,7 +48,7 @@ export function CreateRecordPage(props) {
 
   return (
     <fieldset id="create">
-      <legend>Create New Record</legend>
+      <legend>Sukurti naują įrašą</legend>
 
       <div>
         <label htmlFor="name">Antrastė:</label>

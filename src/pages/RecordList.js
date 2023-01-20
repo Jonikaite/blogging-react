@@ -31,16 +31,24 @@ export function RecordListPage() {
 
       <table>
         <thead>
+          <tr></tr>
           <tr>Antraštė</tr>
           <tr>Publikuota:</tr>
           <tr>Tekstas</tr>
+          <tr></tr>
         </thead>
         <tbody>
           {records.map((record) => (
             <tr key={record.id}>
               <tr>{record.name}</tr>
               <tr>{record.text}</tr>
-              <tr><Link to={"/records/view/" + record.id}>{record.id}</Link></tr>           
+              <tr>
+                <Link to={"/records/view/" + record.id}>
+                  {" "}
+                  Skaityti daugiau
+                  {/* <button>Skaityti daugiau</button> */}
+                </Link>
+              </tr>
             </tr>
           ))}
         </tbody>
